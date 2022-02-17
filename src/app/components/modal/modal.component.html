@@ -1,0 +1,21 @@
+<div class="content">
+
+    <!-- Close button -->
+    <button class="close-button" (click)="onClose.emit()">X</button>
+
+    <!-- Searcher -->
+    <searcher (onSearch)="onSearch($event)" placeholder="Search by title"></searcher>
+
+    <!-- Item -->
+    <ng-container *ngIf="(items$ | async) as items; else noItems">
+        <div class="box" *ngFor="let item of items">
+            <img class="image" [src]="item?.image">
+            <div class="title">{{ item?.title }}</div>
+            <div class="star" (click)="removeFavorite(item)">★</div>
+        </div>    
+    </ng-container>
+
+    <ng-template #noItems>There are not favorite items</ng-template>
+
+</div>
+
