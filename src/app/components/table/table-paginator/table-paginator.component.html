@@ -1,0 +1,7 @@
+<ng-container *ngIf="totalPages !== undefined && currentPage !== undefined">
+    <button (click)="changeTo(0)"><<</button>
+    <button (click)="changeTo(currentPage - 1)"><</button>
+    <button disabled>{{ currentPage + 1 }} / {{ totalPages }}</button>
+    <button (click)="changeTo(currentPage + 1)">></button>
+    <button (click)="changeTo(totalPages - 1)">>></button>
+  </ng-container>

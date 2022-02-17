@@ -1,0 +1,11 @@
+
+<div class="top-bar">
+    <searcher (onSearch)="onSearch($event)" placeholder="Search by title, description, price or email"></searcher>
+    <button class="cta" (click)="switchFavoriteModal()">Favorites</button>
+</div>
+<table-header [configuration]="configuration" (onSortBy)="sortBy($event)"></table-header>
+<table-data *ngFor="let item of itemsDivided" [item]="item" [configuration]="configuration"></table-data>
+<table-paginator [totalPages]="totalPages" [currentPage]="page" (pageChange)="pageChange($event)"></table-paginator>
+
+<!-- Modal -->
+<modal *ngIf="showModal" (onClose)="switchFavoriteModal()"></modal>

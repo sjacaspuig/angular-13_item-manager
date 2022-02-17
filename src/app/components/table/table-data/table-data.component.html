@@ -1,0 +1,27 @@
+
+<!-- Cell -->
+<ng-container *ngIf="item">
+
+    <!-- CTA -->
+    <div class="cell action" (click)="switchFavorite()">
+        {{ (isFavorite$ | async) ? '★' : '☆' }}
+    </div>
+
+    <ng-container *ngFor="let c of configuration">
+
+        <!-- Type text -->
+        <div class="cell" *ngIf="c.type === 'text' || c.type === 'number'; else noText">
+            {{ item[c.id] }} <span *ngIf="c.textToAdd">{{ c.textToAdd }}</span>
+        </div>
+
+        <!-- Type image -->
+        <ng-template #noText>
+            <img class="cell img" [src]="item[c.id]">
+        </ng-template>
+
+    </ng-container>
+
+</ng-container>
+
+
+  

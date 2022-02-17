@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+
+    button:not(:last-child) {
+        margin-right: 4px;
+    }
+}

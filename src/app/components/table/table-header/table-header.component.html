@@ -1,0 +1,7 @@
+<!-- Col-->
+<div class="col" [ngClass]="{'img': c.type === 'img'}" *ngFor="let c of configuration" (click)="sortBy(c)">
+    {{ c.title }}
+</div>
+
+<!-- Action col -->
+<div class="col action"></div>
