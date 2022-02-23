@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { map, Observable, tap } from 'rxjs';
-import { Item } from 'src/app/models/item.interface';
+import { Item } from 'src/app/shared/models/item.interface';
 import { FavoritesService } from 'src/app/services/favorites/favorites.service';
 
 @Component({

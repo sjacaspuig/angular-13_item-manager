@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { Item } from 'src/app/models/item.interface';
-import { TableConfiguration } from 'src/app/models/table-configuration.interface';
+import { Item } from 'src/app/shared/models/item.interface';
+import { TableConfiguration } from 'src/app/shared/models/table-configuration.interface';
 import { FavoritesService } from 'src/app/services/favorites/favorites.service';
 
 @Component({

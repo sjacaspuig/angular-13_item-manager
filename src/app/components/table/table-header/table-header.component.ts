@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { TableConfiguration } from 'src/app/models/table-configuration.interface';
+import { TableConfiguration } from 'src/app/shared/models/table-configuration.interface';
 
 @Component({
   selector: 'table-header',

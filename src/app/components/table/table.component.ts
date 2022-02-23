@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Item } from 'src/app/models/item.interface';
-import { TableConfiguration } from 'src/app/models/table-configuration.interface';
+import { Item } from 'src/app/shared/models/item.interface';
+import { TableConfiguration } from 'src/app/shared/models/table-configuration.interface';
 
 @Component({
   selector: 'table',
