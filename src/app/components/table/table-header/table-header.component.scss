@@ -1,8 +1,9 @@
+@import '../../../shared/styles/mixins';
+
 :host {
-    display: flex;
-    align-items: center;
+    @include display-flex(null, center);
     padding:8px 16px;
-    background-color: #13C1AC;
+    background-color: var(--color-green);
     border-radius: 4px;
     margin-bottom: 8px;
     font-size: 16px;
@@ -11,11 +12,10 @@
     .col {
         text-transform: uppercase;
         font-weight: bold;
-        color: white;
+        color: var(--color-white);
         flex: 1 1 0;
         padding: 8px;
-        display: flex;
-        justify-content: center;
+        @include display-flex(center, null);
 
         
         &.img {

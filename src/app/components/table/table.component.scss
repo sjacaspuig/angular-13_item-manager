@@ -1,12 +1,12 @@
+@import '../../shared/styles/mixins';
+
 :host {
     display: block;
     width: 100%;
 }
 
 .top-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-flex(center, center);
 
     .cta {
         max-width: 120px;

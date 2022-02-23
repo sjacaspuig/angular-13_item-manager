@@ -1,6 +1,7 @@
+@import '../../../shared/styles/mixins';
+
 :host {
-    display: flex;
-    justify-content: flex-end;
+    @include display-flex(flex-end, null);
     margin-top: 16px;
 
     button:not(:last-child) {

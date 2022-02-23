@@ -1,8 +1,9 @@
+@import '../../../shared/styles/mixins';
+
 :host {
-    display: flex;
-    align-items: center;
+    @include display-flex(null, center);
     padding: 8px 16px;
-    background-color: #ECEFF1;
+    background-color: var(--color-grey);
     box-sizing: border-box;
     border-radius: 4px;
     margin-bottom: 8px;
@@ -12,8 +13,7 @@
     .cell {
         flex: 1 1 0;
         padding: 8px;
-        display: flex;
-        justify-content: center;
+        @include display-flex(center, null);
 
         &.img {
             width: 104px;
@@ -33,7 +33,7 @@
             min-width: 32px;
             max-width: 32px;
             font-size: 32px;
-            color: #13C1AC;
+            color: var(--color-green);
         }
     }
 }
