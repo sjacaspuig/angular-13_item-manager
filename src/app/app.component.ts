@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Item } from './models/item.interface';
-import { TableConfiguration } from './models/table-configuration.interface';
+import { TABLE_CONFIGURATION } from './shared/constants/table-configuration';
+import { Item } from './shared/models/item.interface';
+import { TableConfiguration } from './shared/models/table-configuration.interface';
 import { ItemsService } from './services/items/items.service';
 
 @Component({
@@ -12,13 +13,7 @@ import { ItemsService } from './services/items/items.service';
 export class AppComponent implements OnInit {
   
   items$: Observable<Item[]> | undefined;
-  configuration: TableConfiguration[] = [
-    {id: 'title', title: 'Title', type: 'text'},
-    {id: 'description', title: 'Description', type: 'text'},
-    {id: 'price', title: 'Price', type: 'number', textToAdd: '€'},
-    {id: 'email', title: 'Contact',type: 'text'},
-    {id: 'image', title: 'Photo', type: 'img'},
-  ]
+  configuration: TableConfiguration[] = TABLE_CONFIGURATION;
 
   constructor(
     private itemsService: ItemsService
