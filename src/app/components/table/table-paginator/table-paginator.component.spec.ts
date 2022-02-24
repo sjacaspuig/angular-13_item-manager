@@ -6,8 +6,8 @@ describe('TablePaginatorComponent', () => {
   let component: TablePaginatorComponent;
   let fixture: ComponentFixture<TablePaginatorComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       declarations: [ TablePaginatorComponent ]
     })
     .compileComponents();

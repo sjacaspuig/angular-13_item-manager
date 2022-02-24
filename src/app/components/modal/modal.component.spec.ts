@@ -6,8 +6,8 @@ describe('ModalComponent', () => {
   let component: ModalComponent;
   let fixture: ComponentFixture<ModalComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       declarations: [ ModalComponent ]
     })
     .compileComponents();
@@ -21,5 +21,13 @@ describe('ModalComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should correctly @output event to do when modal closes in component', () => {
+    spyOn(component.onClose, 'emit');
+    const button = fixture.nativeElement.querySelector('button');    
+    button.click();
+    fixture.detectChanges();
+    expect(component.onClose.emit).toHaveBeenCalled();
   });
 });
