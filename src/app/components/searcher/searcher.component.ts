@@ -10,7 +10,6 @@ export class SearcherComponent implements OnInit {
 
   //Inputs
   @Input() placeholder: string = 'Search';
-  @Input() id: string = 'Search';
   
   // Outputs
   @Output() onSearch: EventEmitter<EventTarget> = new EventEmitter<EventTarget>();
