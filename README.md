@@ -1,4 +1,9 @@
-# SinglePageApp
+# Item Manager
+
+The item manager is an application that shows you a list of products. 
+These products can be searched by any data and can be sorted by any column.
+In addition, this application allows you to have a list of favourite items.
+Finally, the table incorporates a paginator that displays only 5 items per page.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
